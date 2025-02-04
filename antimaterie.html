@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Antimaterie verstehen</title>
@@ -39,7 +38,7 @@
 
             <p class="mt-2">💰 Preis: <span id="price">62,5 Billionen €</span></p>
 
-            <button onclick="buyAntimatter()" class="mt-4 p-2 bg-green-500 hover:bg-green-600 rounded-lg">Jetzt bestellen</button>
+            <button id="buyButton" class="mt-4 p-2 bg-green-500 hover:bg-green-600 rounded-lg">Jetzt bestellen</button>
 
             <p id="orderResult" class="text-red-400 mt-4"></p>
         </div>
@@ -49,19 +48,7 @@
         <p>© 2025 Kosmologie & Antimaterie</p>
     </footer>
 
-    <script>
-        alert("Hi")
-        function buyAntimatter() {
-            const amount = document.getElementById("amount").value;
-            const price = amount * 62500000000000; // 62,5 Billionen pro Nanogramm
-            document.getElementById("price").innerText = price.toLocaleString() + " €";
-
-            if (amount > 0) {
-                document.getElementById("orderResult").innerText = "✅ Bestellung erfolgreich! Lieferung in 5 Milliarden Jahren.";
-            } else {
-                document.getElementById("orderResult").innerText = "❌ Bitte eine gültige Menge eingeben.";
-            }
-        }
-    </script>
+    <!-- Externes JavaScript importieren -->
+    <script src="antimaterie.js"></script>
 </body>
 </html>
