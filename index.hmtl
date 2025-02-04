@@ -5,23 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kosmologie & Antimaterie</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 200px;
+            background-color: #2d3748;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        .menu a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid #4a5568;
+        }
+        .menu a:hover {
+            background-color: #4a5568;
+        }
+        .menu-toggle {
+            cursor: pointer;
+        }
+        .menu.show {
+            display: block;
+        }
+    </style>
 </head>
 <body class="bg-gray-900 text-white font-sans">
     <header class="bg-gray-800 p-4 shadow-lg flex justify-between items-center relative">
         <h1 class="text-2xl font-bold">Kosmologie & Antimaterie</h1>
         <button class="p-2 bg-blue-600 hover:bg-blue-700 rounded-lg menu-toggle">☰ Menü</button>
     </header>
-
+    
     <nav class="menu" id="menu">
-        <a href="/Cosmology-Website/kosmologie.html">Was ist Kosmologie?</a>
-        <a href="/Cosmology-Website/antimaterie.html">Antimaterie verstehen</a>
+        <a href="kosmologie.html">Kosmologie: Das Universum verstehen</a>
+        <a href="antimaterie.html">Antimaterie: Die Gegenspielerin der Materie</a>
+        <a href="dunkle-materie.html">Dunkle Materie: Unsichtbare Masse</a>
     </nav>
-
+    
     <main class="p-4 text-center">
-        <h2 class="text-xl font-semibold">Erforsche das Universum</h2>
-        <p>Diese Website bietet eine Einführung in die faszinierenden Themen der Kosmologie und Antimaterie.</p>
+        <h2 class="text-xl font-semibold">Willkommen in der Welt der Kosmologie & Antimaterie</h2>
+        <p>Diese Website bietet dir einen tiefen Einblick in die spannendsten Geheimnisse des Universums.</p>
     </main>
-
+    
     <footer class="bg-gray-800 p-4 text-center mt-8">
         <p>© 2025 Kosmologie & Antimaterie</p>
     </footer>
@@ -30,9 +60,9 @@
         document.addEventListener("DOMContentLoaded", function() {
             const menuToggle = document.querySelector(".menu-toggle");
             const menu = document.getElementById("menu");
-
+            
             menuToggle.addEventListener("click", function(event) {
-                event.stopPropagation();
+                event.stopPropagation();  // Verhindert das Schließen beim Klick auf den Button
                 menu.classList.toggle("show");
             });
 
