@@ -31,16 +31,18 @@
         </div>
 
         <!-- KAUF-FUNKTION (hypothetisch) -->
-        <div class="mt-8 bg-gray-800 p-6 rounded-lg shadow-lg">
+        <div class="mt-8 bg-gray-800 p-6 rounded-lg shadow-lg w-3/4 mx-auto">
             <h3 class="text-xl font-semibold">🚀 Wählen Sie Ihre Antimaterie-Menge</h3>
-            <label for="amount" class="block mt-4">Menge (in Nanogramm):</label>
-            <input type="number" id="amount" value="1" class="mt-2 p-2 text-black rounded w-20">
+            <label for="amount" class="block mt-4 text-lg">Menge (in Nanogramm):</label>
+            <div class="flex justify-center items-center mt-2">
+                <input type="number" id="amount" value="1" min="0" class="p-2 text-black rounded w-24 text-center border border-gray-500">
+            </div>
 
-            <p class="mt-2">💰 Preis: <span id="price">62,5 Billionen €</span></p>
+            <p class="mt-2 text-lg">💰 Preis: <span id="price" class="font-bold text-green-400">62,5 Billionen €</span></p>
 
-            <button id="buyButton" class="mt-4 p-2 bg-green-500 hover:bg-green-600 rounded-lg">Jetzt bestellen</button>
+            <button id="buyButton" class="mt-4 p-3 bg-green-500 hover:bg-green-600 rounded-lg text-lg font-semibold">Jetzt bestellen</button>
 
-            <p id="orderResult" class="text-red-400 mt-4"></p>
+            <p id="orderResult" class="text-red-400 mt-4 text-lg"></p>
         </div>
     </main>
 
