@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kosmologie & Antimaterie</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <header class="bg-gray-800 p-4 shadow-lg flex justify-between items-center relative">
+        <h1 class="text-2xl font-bold">Kosmologie & Antimaterie</h1>
+        <button class="p-2 bg-blue-600 hover:bg-blue-700 rounded-lg menu-toggle">☰ Menü</button>
+    </header>
+
+    <nav class="menu" id="menu">
+        <a href="kosmologie.html">Was ist Kosmologie?</a>
+        <a href="antimaterie.html">Antimaterie verstehen</a>
+    </nav>
+
+    <main class="p-4 text-center">
+        <h2 class="text-xl font-semibold">Erforsche das Universum</h2>
+        <p>Diese Website bietet eine Einführung in die faszinierenden Themen der Kosmologie und Antimaterie.</p>
+    </main>
+
+    <footer class="bg-gray-800 p-4 text-center mt-8">
+        <p>© 2025 Kosmologie & Antimaterie</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const menu = document.getElementById("menu");
+
+            menuToggle.addEventListener("click", function(event) {
+                event.stopPropagation();
+                menu.classList.toggle("show");
+            });
+
+            document.addEventListener("click", function(event) {
+                if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    menu.classList.remove("show");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
