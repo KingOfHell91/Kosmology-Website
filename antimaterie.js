@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updatePrice() {
         const amount = parseFloat(amountInput.value);
+        if (isNaN(amount) || amount < 0) {
+            priceDisplay.innerText = "Ungültige Menge!";
+            return;
+        }
         const price = amount * 62500000000000; // 62,5 Billionen € pro Nanogramm
         priceDisplay.innerText = price.toLocaleString() + " €";
     }
